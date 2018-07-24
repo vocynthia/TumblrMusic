@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="bdR-sy-UDD">
-                                <rect key="frame" x="55" y="318.5" width="266" height="93"/>
+                                <rect key="frame" x="55" y="319" width="266" height="93"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BUG-sL-SBt">
                                         <rect key="frame" x="0.0" y="0.0" width="266" height="30"/>
@@ -52,10 +53,10 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZe-Os-PD6">
-                                <rect key="frame" x="107" y="454" width="162" height="32"/>
+                                <rect key="frame" x="107" y="454" width="161" height="32"/>
                                 <color key="backgroundColor" red="0.24602715351829366" green="0.37700622908239689" blue="0.5771930520304569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="zcu-vF-cu0"/>
+                                    <constraint firstAttribute="width" secondItem="yZe-Os-PD6" secondAttribute="height" multiplier="161:32" id="JEi-Rq-FK8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Enter">
@@ -69,15 +70,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="yZe-Os-PD6" firstAttribute="top" secondItem="bdR-sy-UDD" secondAttribute="bottom" constant="42.5" id="79K-1l-Vfh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yZe-Os-PD6" secondAttribute="bottom" constant="181" id="EAC-mk-Lgp"/>
-                            <constraint firstItem="bdR-sy-UDD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="SQ4-ug-FtW"/>
-                            <constraint firstItem="bdR-sy-UDD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XN2-I6-XgA"/>
-                            <constraint firstItem="bdR-sy-UDD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="254.5" id="Z0t-z5-FcA"/>
+                            <constraint firstItem="bdR-sy-UDD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="BSV-ZU-t7Y"/>
+                            <constraint firstItem="bdR-sy-UDD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H7i-DK-ewf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yZe-Os-PD6" secondAttribute="bottom" constant="181" id="Ng7-TA-EK5"/>
+                            <constraint firstItem="yZe-Os-PD6" firstAttribute="top" secondItem="bdR-sy-UDD" secondAttribute="bottom" constant="42" id="USe-hZ-wRw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bdR-sy-UDD" secondAttribute="trailing" constant="54" id="XVi-ZR-zQu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yZe-Os-PD6" secondAttribute="trailing" constant="107" id="c5M-EK-HL6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bdR-sy-UDD" secondAttribute="trailing" constant="55" id="dUx-gk-y9b"/>
                             <constraint firstItem="yZe-Os-PD6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="fsG-ed-qhE"/>
-                            <constraint firstItem="bdR-sy-UDD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oQ2-Me-rKO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -86,7 +85,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="enterButton" destination="yZe-Os-PD6" id="9o4-Zi-1da"/>
-                        <outlet property="enterButtonPressed" destination="yZe-Os-PD6" id="sKU-1i-hPV"/>
                         <outlet property="tagTextField" destination="BJ6-9Z-3qe" id="EbB-WY-n69"/>
                         <outlet property="usernameTextField" destination="BUG-sL-SBt" id="DNw-5V-Bw7"/>
                     </connections>

@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         
     }
 
-    @IBAction func enterButtonPressed(_ sender: Any) {
+    @IBAction func enterButtonPressed(_ sender: UIButton) {
       print("lmao")
     }
 }
