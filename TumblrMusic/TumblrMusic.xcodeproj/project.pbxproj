@@ -12,6 +12,7 @@
 		FA95A8BC21078C2300D63A14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA95A8BA21078C2300D63A14 /* Main.storyboard */; };
 		FA95A8BE21078C2500D63A14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA95A8BD21078C2500D63A14 /* Assets.xcassets */; };
 		FA95A8C121078C2500D63A14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA95A8BF21078C2500D63A14 /* LaunchScreen.storyboard */; };
+		FAA6A01D21079E6200F321D2 /* MusicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6A01C21079E6200F321D2 /* MusicListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FA95A8BD21078C2500D63A14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA95A8C021078C2500D63A14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA95A8C221078C2500D63A14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA6A01C21079E6200F321D2 /* MusicListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +57,30 @@
 			isa = PBXGroup;
 			children = (
 				FA95A8B621078C2300D63A14 /* AppDelegate.swift */,
-				FA95A8B821078C2300D63A14 /* ViewController.swift */,
-				FA95A8BA21078C2300D63A14 /* Main.storyboard */,
+				FAA6A01B21079A0E00F321D2 /* ViewControllers */,
+				FAA6A01A210799F100F321D2 /* storyboards */,
 				FA95A8BD21078C2500D63A14 /* Assets.xcassets */,
-				FA95A8BF21078C2500D63A14 /* LaunchScreen.storyboard */,
 				FA95A8C221078C2500D63A14 /* Info.plist */,
 			);
 			path = TumblrMusic;
+			sourceTree = "<group>";
+		};
+		FAA6A01A210799F100F321D2 /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FA95A8BF21078C2500D63A14 /* LaunchScreen.storyboard */,
+				FA95A8BA21078C2300D63A14 /* Main.storyboard */,
+			);
+			path = storyboards;
+			sourceTree = "<group>";
+		};
+		FAA6A01B21079A0E00F321D2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA95A8B821078C2300D63A14 /* ViewController.swift */,
+				FAA6A01C21079E6200F321D2 /* MusicListViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +156,7 @@
 			files = (
 				FA95A8B921078C2300D63A14 /* ViewController.swift in Sources */,
 				FA95A8B721078C2300D63A14 /* AppDelegate.swift in Sources */,
+				FAA6A01D21079E6200F321D2 /* MusicListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
