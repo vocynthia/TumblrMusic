@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="bdR-sy-UDD">
-                                <rect key="frame" x="55" y="319" width="266" height="93"/>
+                                <rect key="frame" x="55" y="200" width="266" height="93"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BUG-sL-SBt">
                                         <rect key="frame" x="0.0" y="0.0" width="266" height="30"/>
@@ -53,7 +53,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZe-Os-PD6">
-                                <rect key="frame" x="107" y="454" width="161" height="32"/>
+                                <rect key="frame" x="107" y="335" width="161" height="32"/>
                                 <color key="backgroundColor" red="0.24602715351829366" green="0.37700622908239689" blue="0.5771930520304569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="yZe-Os-PD6" secondAttribute="height" multiplier="161:32" id="JEi-Rq-FK8"/>
@@ -72,7 +72,7 @@
                         <constraints>
                             <constraint firstItem="bdR-sy-UDD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="BSV-ZU-t7Y"/>
                             <constraint firstItem="bdR-sy-UDD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H7i-DK-ewf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yZe-Os-PD6" secondAttribute="bottom" constant="181" id="Ng7-TA-EK5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yZe-Os-PD6" secondAttribute="bottom" constant="300" id="Ng7-TA-EK5"/>
                             <constraint firstItem="yZe-Os-PD6" firstAttribute="top" secondItem="bdR-sy-UDD" secondAttribute="bottom" constant="42" id="USe-hZ-wRw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bdR-sy-UDD" secondAttribute="trailing" constant="54" id="XVi-ZR-zQu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yZe-Os-PD6" secondAttribute="trailing" constant="107" id="c5M-EK-HL6"/>
@@ -140,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPM-NK-fzv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2528.8000000000002" y="105.69715142428787"/>
+            <point key="canvasLocation" x="2650" y="113"/>
         </scene>
         <!--AV Player View Controller-->
         <scene sceneID="ci9-2E-a1X">
