@@ -31,6 +31,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="usernameTextFieldUsed:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="noc-T3-8hX"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tag(optional)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BJ6-9Z-3qe">
                                         <rect key="frame" x="0.0" y="63" width="266" height="30"/>
@@ -42,6 +45,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="tagTextFieldUsed:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="axY-jE-Y23"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -56,6 +62,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="enterButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ima-7c-Pfc"/>
                                     <segue destination="f21-5f-IX2" kind="show" id="KL2-R8-AzG"/>
                                 </connections>
                             </button>
@@ -77,6 +84,12 @@
                     <navigationItem key="navigationItem" title="Main" id="026-YL-ysg">
                         <barButtonItem key="backBarButtonItem" title=" " id="vLh-VC-Rcs"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="enterButton" destination="yZe-Os-PD6" id="9o4-Zi-1da"/>
+                        <outlet property="enterButtonPressed" destination="yZe-Os-PD6" id="sKU-1i-hPV"/>
+                        <outlet property="tagTextField" destination="BJ6-9Z-3qe" id="EbB-WY-n69"/>
+                        <outlet property="usernameTextField" destination="BUG-sL-SBt" id="DNw-5V-Bw7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
