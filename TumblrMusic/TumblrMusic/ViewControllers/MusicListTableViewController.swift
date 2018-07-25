@@ -7,10 +7,9 @@
 //
 
 import UIKit
-import CocoaPods
 import Alamofire
 
-class MusicTableViewController: UITableViewController {
+class MusicListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +34,9 @@ class MusicTableViewController: UITableViewController {
                 if let value = response.result.value {
                     let json = JSON(value)
                     print(json)
-                    
-                    
-                    
+
+
+
                 }
             case .failure(let error):
                 print(error)

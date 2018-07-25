@@ -8,12 +8,12 @@
 
 import Foundation
 import Alamofire
-import CocoaPods
+import UIKit
 
 struct NetworkManager {
     func getAudioPosts(username: String){
         
-        let link = "https://api.tumblr.com/v2/blog/\(username)/posts/audio?api_key=7uLhMXjYCmqyvzkaWqCXiSZ3RTEIEh9ex8QR3AWAY5RdpGXKcU"
+         link = "https://api.tumblr.com/v2/blog/\(username)/posts/audio?api_key=7uLhMXjYCmqyvzkaWqCXiSZ3RTEIEh9ex8QR3AWAY5RdpGXKcU"
         
     }
     
