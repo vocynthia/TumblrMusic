@@ -103,10 +103,10 @@
             </objects>
             <point key="canvasLocation" x="1778.4000000000001" y="112.89355322338831"/>
         </scene>
-        <!--Music Table View Controller-->
+        <!--Music List Table View Controller-->
         <scene sceneID="30q-vR-zH5">
             <objects>
-                <viewController id="f21-5f-IX2" customClass="MusicTableViewController" customModule="TumblrMusic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="f21-5f-IX2" customClass="MusicListTableViewController" customModule="TumblrMusic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="baL-8C-qPB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,6 +116,35 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6J5-Z5-JiN" customClass="MusicPlayer">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="5Wj-g5-TGO">
+                                        <color key="tintColor" red="0.44161450019999998" green="0.6021522238" blue="0.83758328049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="rewind" id="XaM-i0-lwV">
+                                        <color key="tintColor" red="0.44161450019999998" green="0.6021522238" blue="0.83758328049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vab-7o-pHK">
+                                        <color key="tintColor" red="0.44161450019999998" green="0.6021522238" blue="0.83758328049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="play" id="GS6-ZS-dnH">
+                                        <color key="tintColor" red="0.44161450019999998" green="0.6021522238" blue="0.83758328049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1x0-qt-fnZ">
+                                        <color key="tintColor" red="0.44161450019999998" green="0.6021522238" blue="0.83758328049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="fastForward" id="i2z-pg-7gK">
+                                        <color key="tintColor" red="0.44161450019999998" green="0.6021522238" blue="0.83758328049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Aqr-JR-8NZ">
+                                        <color key="tintColor" red="0.44161450019999998" green="0.6021522238" blue="0.83758328049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

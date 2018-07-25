@@ -14,6 +14,10 @@
 		FA95A8BE21078C2500D63A14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA95A8BD21078C2500D63A14 /* Assets.xcassets */; };
 		FA95A8C121078C2500D63A14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA95A8BF21078C2500D63A14 /* LaunchScreen.storyboard */; };
 		FAA6A01D21079E6200F321D2 /* MusicListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6A01C21079E6200F321D2 /* MusicListTableViewController.swift */; };
+		FACF672621093A110056C64E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACF672521093A110056C64E /* AVFoundation.framework */; };
+		FACF672821093A180056C64E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACF672721093A180056C64E /* Alamofire.framework */; };
+		FACF672A21093A1F0056C64E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACF672921093A1F0056C64E /* SwiftyJSON.framework */; };
+		FACF67352109404E0056C64E /* if_045_Shuffle_183174.png in Resources */ = {isa = PBXBuildFile; fileRef = FACF67342109404E0056C64E /* if_045_Shuffle_183174.png */; };
 		FAD8AAA12108EC6A00FE170C /* NetworService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8AAA02108EC6A00FE170C /* NetworService.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +33,10 @@
 		FA95A8C021078C2500D63A14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA95A8C221078C2500D63A14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAA6A01C21079E6200F321D2 /* MusicListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListTableViewController.swift; sourceTree = "<group>"; };
+		FACF672521093A110056C64E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FACF672721093A180056C64E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FACF672921093A1F0056C64E /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FACF67342109404E0056C64E /* if_045_Shuffle_183174.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = if_045_Shuffle_183174.png; path = ../../../../../../Desktop/if_045_Shuffle_183174.png; sourceTree = "<group>"; };
 		FAD8AAA02108EC6A00FE170C /* NetworService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -37,6 +45,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACF672A21093A1F0056C64E /* SwiftyJSON.framework in Frameworks */,
+				FACF672821093A180056C64E /* Alamofire.framework in Frameworks */,
+				FACF672621093A110056C64E /* AVFoundation.framework in Frameworks */,
 				BE91BB1BBA21F59C0C472328 /* Pods_TumblrMusic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,6 +67,9 @@
 		BCF46B44C1BE48D61D32F6F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FACF672921093A1F0056C64E /* SwiftyJSON.framework */,
+				FACF672721093A180056C64E /* Alamofire.framework */,
+				FACF672521093A110056C64E /* AVFoundation.framework */,
 				72CB915112F7CD1CFEBBC4C1 /* Pods_TumblrMusic.framework */,
 			);
 			name = Frameworks;
@@ -82,6 +96,7 @@
 		FA95A8B521078C2300D63A14 /* TumblrMusic */ = {
 			isa = PBXGroup;
 			children = (
+				FACF672B21093DD40056C64E /* icons and images */,
 				FAD8AA9F2108EC5000FE170C /* Network */,
 				FA95A8B621078C2300D63A14 /* AppDelegate.swift */,
 				FAA6A01B21079A0E00F321D2 /* ViewControllers */,
@@ -108,6 +123,14 @@
 				FAA6A01C21079E6200F321D2 /* MusicListTableViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FACF672B21093DD40056C64E /* icons and images */ = {
+			isa = PBXGroup;
+			children = (
+				FACF67342109404E0056C64E /* if_045_Shuffle_183174.png */,
+			);
+			path = "icons and images";
 			sourceTree = "<group>";
 		};
 		FAD8AA9F2108EC5000FE170C /* Network */ = {
@@ -180,6 +203,7 @@
 			files = (
 				FA95A8C121078C2500D63A14 /* LaunchScreen.storyboard in Resources */,
 				FA95A8BE21078C2500D63A14 /* Assets.xcassets in Resources */,
+				FACF67352109404E0056C64E /* if_045_Shuffle_183174.png in Resources */,
 				FA95A8BC21078C2300D63A14 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
