@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class MusicListTableViewController: UITableViewController {
 
@@ -28,7 +29,7 @@ class MusicListTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        Alamofire.request(apiToContact).validate().responseJSON() { response in
+        Alamofire.request(link as! URLRequestConvertible).validate().responseJSON() { response in
             switch response.result {
             case .success:
                 if let value = response.result.value {

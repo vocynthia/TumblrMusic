@@ -9,11 +9,13 @@
 import Foundation
 import Alamofire
 import UIKit
+import SwiftyJSON
+
 
 struct NetworkManager {
     func getAudioPosts(username: String){
         
-         link = "https://api.tumblr.com/v2/blog/\(username)/posts/audio?api_key=7uLhMXjYCmqyvzkaWqCXiSZ3RTEIEh9ex8QR3AWAY5RdpGXKcU"
+         let link = "https://api.tumblr.com/v2/blog/\(username)/posts/audio?api_key=7uLhMXjYCmqyvzkaWqCXiSZ3RTEIEh9ex8QR3AWAY5RdpGXKcU"
         
     }
     
