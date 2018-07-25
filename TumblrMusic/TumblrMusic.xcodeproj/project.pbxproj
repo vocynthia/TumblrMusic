@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE91BB1BBA21F59C0C472328 /* Pods_TumblrMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CB915112F7CD1CFEBBC4C1 /* Pods_TumblrMusic.framework */; };
 		FA95A8B721078C2300D63A14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95A8B621078C2300D63A14 /* AppDelegate.swift */; };
 		FA95A8B921078C2300D63A14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95A8B821078C2300D63A14 /* ViewController.swift */; };
 		FA95A8BC21078C2300D63A14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA95A8BA21078C2300D63A14 /* Main.storyboard */; };
 		FA95A8BE21078C2500D63A14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA95A8BD21078C2500D63A14 /* Assets.xcassets */; };
 		FA95A8C121078C2500D63A14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA95A8BF21078C2500D63A14 /* LaunchScreen.storyboard */; };
-		FAA6A01D21079E6200F321D2 /* MusicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6A01C21079E6200F321D2 /* MusicListViewController.swift */; };
+		FAA6A01D21079E6200F321D2 /* MusicListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6A01C21079E6200F321D2 /* MusicListTableViewController.swift */; };
+		FAD8AAA12108EC6A00FE170C /* NetworService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8AAA02108EC6A00FE170C /* NetworService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23162E9353E6DFAFA4758508 /* Pods-TumblrMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TumblrMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-TumblrMusic/Pods-TumblrMusic.release.xcconfig"; sourceTree = "<group>"; };
+		56EAA7AAF971CB9244C7BF67 /* Pods-TumblrMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TumblrMusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TumblrMusic/Pods-TumblrMusic.debug.xcconfig"; sourceTree = "<group>"; };
+		72CB915112F7CD1CFEBBC4C1 /* Pods_TumblrMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TumblrMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA95A8B321078C2300D63A14 /* TumblrMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TumblrMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA95A8B621078C2300D63A14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA95A8B821078C2300D63A14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,7 +28,8 @@
 		FA95A8BD21078C2500D63A14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA95A8C021078C2500D63A14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA95A8C221078C2500D63A14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAA6A01C21079E6200F321D2 /* MusicListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewController.swift; sourceTree = "<group>"; };
+		FAA6A01C21079E6200F321D2 /* MusicListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListTableViewController.swift; sourceTree = "<group>"; };
+		FAD8AAA02108EC6A00FE170C /* NetworService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE91BB1BBA21F59C0C472328 /* Pods_TumblrMusic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		718EC8AC71DF2899AB615866 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56EAA7AAF971CB9244C7BF67 /* Pods-TumblrMusic.debug.xcconfig */,
+				23162E9353E6DFAFA4758508 /* Pods-TumblrMusic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BCF46B44C1BE48D61D32F6F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72CB915112F7CD1CFEBBC4C1 /* Pods_TumblrMusic.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FA95A8AA21078C2200D63A14 = {
 			isa = PBXGroup;
 			children = (
 				FA95A8B521078C2300D63A14 /* TumblrMusic */,
 				FA95A8B421078C2300D63A14 /* Products */,
+				718EC8AC71DF2899AB615866 /* Pods */,
+				BCF46B44C1BE48D61D32F6F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +82,7 @@
 		FA95A8B521078C2300D63A14 /* TumblrMusic */ = {
 			isa = PBXGroup;
 			children = (
+				FAD8AA9F2108EC5000FE170C /* Network */,
 				FA95A8B621078C2300D63A14 /* AppDelegate.swift */,
 				FAA6A01B21079A0E00F321D2 /* ViewControllers */,
 				FAA6A01A210799F100F321D2 /* storyboards */,
@@ -68,8 +95,8 @@
 		FAA6A01A210799F100F321D2 /* storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				FA95A8BF21078C2500D63A14 /* LaunchScreen.storyboard */,
 				FA95A8BA21078C2300D63A14 /* Main.storyboard */,
+				FA95A8BF21078C2500D63A14 /* LaunchScreen.storyboard */,
 			);
 			path = storyboards;
 			sourceTree = "<group>";
@@ -78,9 +105,17 @@
 			isa = PBXGroup;
 			children = (
 				FA95A8B821078C2300D63A14 /* ViewController.swift */,
-				FAA6A01C21079E6200F321D2 /* MusicListViewController.swift */,
+				FAA6A01C21079E6200F321D2 /* MusicListTableViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FAD8AA9F2108EC5000FE170C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FAD8AAA02108EC6A00FE170C /* NetworService.swift */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,9 +125,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA95A8C521078C2500D63A14 /* Build configuration list for PBXNativeTarget "TumblrMusic" */;
 			buildPhases = (
+				B8EE04FD6D74838699C134E7 /* [CP] Check Pods Manifest.lock */,
 				FA95A8AF21078C2300D63A14 /* Sources */,
 				FA95A8B021078C2300D63A14 /* Frameworks */,
 				FA95A8B121078C2300D63A14 /* Resources */,
+				315935FCAFF1FB6E9808CB03 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +186,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		315935FCAFF1FB6E9808CB03 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TumblrMusic/Pods-TumblrMusic-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TumblrMusic/Pods-TumblrMusic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8EE04FD6D74838699C134E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TumblrMusic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA95A8AF21078C2300D63A14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -156,7 +234,8 @@
 			files = (
 				FA95A8B921078C2300D63A14 /* ViewController.swift in Sources */,
 				FA95A8B721078C2300D63A14 /* AppDelegate.swift in Sources */,
-				FAA6A01D21079E6200F321D2 /* MusicListViewController.swift in Sources */,
+				FAD8AAA12108EC6A00FE170C /* NetworService.swift in Sources */,
+				FAA6A01D21079E6200F321D2 /* MusicListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +377,7 @@
 		};
 		FA95A8C621078C2500D63A14 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56EAA7AAF971CB9244C7BF67 /* Pods-TumblrMusic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -315,6 +395,7 @@
 		};
 		FA95A8C721078C2500D63A14 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23162E9353E6DFAFA4758508 /* Pods-TumblrMusic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

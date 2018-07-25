@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController {
 
@@ -15,10 +16,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var tagTextField: UITextField!
     @IBOutlet weak var enterButton: UIButton!
    
+    @IBOutlet weak var invalidUsername: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+     
+        // can only segue if username is valid
+//        if (!usernameTextField.text.length) {
+//        performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+//        } else {
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,5 +45,6 @@ class ViewController: UIViewController {
     @IBAction func enterButtonPressed(_ sender: UIButton) {
       print("lmao")
     }
+
 }
 
