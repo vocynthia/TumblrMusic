@@ -8,7 +8,9 @@
 
 import Foundation
 import Alamofire
-import CocoaPods
+import SwiftyJSON
+
+
 
 struct NetworkManager {
     func getAudioPosts(username: String){
