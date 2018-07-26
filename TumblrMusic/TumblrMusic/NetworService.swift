@@ -20,5 +20,3 @@ struct NetworkManager {
     }
     
 }
-
-

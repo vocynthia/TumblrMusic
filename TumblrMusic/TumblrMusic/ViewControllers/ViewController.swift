@@ -7,20 +7,16 @@
 //
 
 import UIKit
-import AVFoundation
+import Foundation
 
 class ViewController: UIViewController {
 
-    var audioPlayer: AVAudioPlayer!
-
-    
     //IBOUTLETS
-    
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var tagTextField: UITextField!
     @IBOutlet weak var enterButton: UIButton!
-    @IBOutlet weak var UsernameIsInvalidLabel: UILabel!
-    
+   
+    @IBOutlet weak var invalidUsername: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,24 +34,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 //IBACTIONS
-  
-    
-    
-    @IBAction func PlayAndPauseButton(_ sender: UIBarButtonItem) {
-        
-    
-    }
-    
-    @IBAction func BackwardButton(_ sender: UIBarButtonItem) {
-    audioPlayer.stop()
-    audioPlayer.currentTime = 0
-        
-    }
-   
-    @IBAction func ForwardButton(_ sender: UIBarButtonItem) {
-    
-    }
-    
     @IBAction func usernameTextFieldUsed(_ sender: Any) {
     
     }
