@@ -116,6 +116,38 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+<<<<<<< HEAD
+=======
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6J5-Z5-JiN" customClass="MusicPlayer">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="5Wj-g5-TGO">
+                                        <color key="tintColor" red="0.44161450019999998" green="0.6021522238" blue="0.83758328049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="rewind" id="XaM-i0-lwV">
+                                        <color key="tintColor" red="0.44161450019999998" green="0.6021522238" blue="0.83758328049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vab-7o-pHK">
+                                        <color key="tintColor" red="0.44161450019999998" green="0.6021522238" blue="0.83758328049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="play" id="GS6-ZS-dnH">
+                                        <color key="tintColor" red="0.44161450019999998" green="0.6021522238" blue="0.83758328049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1x0-qt-fnZ">
+                                        <color key="tintColor" red="0.44161450019999998" green="0.6021522238" blue="0.83758328049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="fastForward" id="i2z-pg-7gK">
+                                        <color key="tintColor" red="0.44161450019999998" green="0.6021522238" blue="0.83758328049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Aqr-JR-8NZ">
+                                        <color key="tintColor" red="0.44161450019999998" green="0.6021522238" blue="0.83758328049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                            </toolbar>
+>>>>>>> parent of 804b99f... idk
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
