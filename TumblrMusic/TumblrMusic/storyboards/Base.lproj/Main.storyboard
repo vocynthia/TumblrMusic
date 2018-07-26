@@ -94,6 +94,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="vLh-VC-Rcs"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="UsernameIsInvalidLabel" destination="fSb-Mk-eYD" id="ZDv-Nq-00G"/>
                         <outlet property="enterButton" destination="yZe-Os-PD6" id="9o4-Zi-1da"/>
                         <outlet property="tagTextField" destination="BJ6-9Z-3qe" id="EbB-WY-n69"/>
                         <outlet property="usernameTextField" destination="BUG-sL-SBt" id="DNw-5V-Bw7"/>
@@ -126,18 +127,27 @@
                                     </barButtonItem>
                                     <barButtonItem systemItem="rewind" id="XaM-i0-lwV">
                                         <color key="tintColor" red="0.44161450019999998" green="0.6021522238" blue="0.83758328049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="BackwardButton:" destination="txz-oI-I62" id="QW4-s2-uoO"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="vab-7o-pHK">
                                         <color key="tintColor" red="0.44161450019999998" green="0.6021522238" blue="0.83758328049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </barButtonItem>
                                     <barButtonItem systemItem="play" id="GS6-ZS-dnH">
                                         <color key="tintColor" red="0.44161450019999998" green="0.6021522238" blue="0.83758328049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="PlayAndPauseButton:" destination="txz-oI-I62" id="k7T-l6-h4p"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="1x0-qt-fnZ">
                                         <color key="tintColor" red="0.44161450019999998" green="0.6021522238" blue="0.83758328049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </barButtonItem>
                                     <barButtonItem systemItem="fastForward" id="i2z-pg-7gK">
                                         <color key="tintColor" red="0.44161450019999998" green="0.6021522238" blue="0.83758328049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="ForwardButton:" destination="txz-oI-I62" id="eyu-wG-qmM"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Aqr-JR-8NZ">
                                         <color key="tintColor" red="0.44161450019999998" green="0.6021522238" blue="0.83758328049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -152,6 +162,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPM-NK-fzv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="txz-oI-I62" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2648.8000000000002" y="112.89355322338831"/>
         </scene>
