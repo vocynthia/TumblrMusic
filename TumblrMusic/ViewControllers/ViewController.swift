@@ -8,10 +8,8 @@
 
 import UIKit
 import Foundation
-<<<<<<< HEAD
-=======
 import AVFoundation
->>>>>>> parent of 804b99f... idk
+
 
 class ViewController: UIViewController {
 
