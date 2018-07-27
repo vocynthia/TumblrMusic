@@ -10,6 +10,12 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+
+//internal func idk(){
+//    let jsonData = try! Data(contentsOf: jsonURL)
+//???? = postsData["meta"]["reposnse"]["posts"].arrayValue
+//}
+
 class MusicListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
@@ -18,8 +24,6 @@ class MusicListTableViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,8 +32,12 @@ class MusicListTableViewController: UITableViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        Alamofire.request(link as! URLRequestConvertible).validate().responseJSON() { response in
+  
+        let NM = NetworkManager()
+        let url = NM.getAudioPosts(username: "dennocoil")
+    
+
+        Alamofire.request(URL(string: url)!).validate().responseJSON() { response in
             switch response.result {
             case .success:
                 if let value = response.result.value {

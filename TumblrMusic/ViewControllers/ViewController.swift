@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+
         // can only segue if username is valid
 //        if (!usernameTextField.text.length) {
 //        performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
