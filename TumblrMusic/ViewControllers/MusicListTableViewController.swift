@@ -10,11 +10,21 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-
 //internal func idk(){
+//    guard let jsonURL = Bundle.main.url(forAuxiliaryExecutable: "NetworkService" )
+//        else {
+//        print("Could not find json!")
+//        return
+//    }
 //    let jsonData = try! Data(contentsOf: jsonURL)
-//???? = postsData["meta"]["reposnse"]["posts"].arrayValue
+//
+//    let postsData = try! JSON(data: jsonData)
+//let audioPosts = postsData["meta"]["reposnse"]["posts"].arrayValue
+//let test = filter(json: audioPosts)
+//print("jkhjkhkh \(test.artist)")
 //}
+
+
 
 class MusicListTableViewController: UITableViewController {
 
@@ -32,26 +42,26 @@ class MusicListTableViewController: UITableViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-  
+        
         let NM = NetworkManager()
-        let url = NM.getAudioPosts(username: "dennocoil")
-    
-
+        let url = NM.getAudioPosts(username: "")
+        
+        
         Alamofire.request(URL(string: url)!).validate().responseJSON() { response in
             switch response.result {
             case .success:
                 if let value = response.result.value {
                     let json = JSON(value)
                     print(json)
-
-
-
+                    
+                    
+                    
                 }
             case .failure(let error):
                 print(error)
             }
         }
-    }
+   }
 
     // MARK: - Table view data source
 
@@ -121,3 +131,4 @@ class MusicListTableViewController: UITableViewController {
     */
 
 }
+

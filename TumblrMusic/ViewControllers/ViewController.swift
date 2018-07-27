@@ -9,6 +9,9 @@
 import UIKit
 import Foundation
 import AVFoundation
+import Alamofire
+import SwiftyJSON
+
 
 
 class ViewController: UIViewController {
@@ -20,9 +23,12 @@ class ViewController: UIViewController {
    
     @IBOutlet weak var invalidUsername: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+    
         // can only segue if username is valid
 //        if (!usernameTextField.text.length) {
 //        performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
@@ -37,7 +43,7 @@ class ViewController: UIViewController {
     }
 //IBACTIONS
     @IBAction func usernameTextFieldUsed(_ sender: Any) {
-    
+        
     }
     
     @IBAction func tagTextFieldUsed(_ sender: Any) {
@@ -45,8 +51,20 @@ class ViewController: UIViewController {
     }
 
     @IBAction func enterButtonPressed(_ sender: UIButton) {
-      print("lmao")
+        guard let usernameTextField = self.usernameTextField.text
+            else { return }
+
+        
+        guard let tagTextField = self.tagTextField.text
+            else {return}
+        print("username entered is \(usernameTextField)")
+        print("button was pressed")
+        print("tag entered was \(tagTextField)")
+        
+        
     }
 
-}
+    }
+
+
 

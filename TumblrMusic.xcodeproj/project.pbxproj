@@ -14,7 +14,7 @@
 		FA95A8BE21078C2500D63A14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA95A8BD21078C2500D63A14 /* Assets.xcassets */; };
 		FA95A8C121078C2500D63A14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA95A8BF21078C2500D63A14 /* LaunchScreen.storyboard */; };
 		FAA6A01D21079E6200F321D2 /* MusicListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6A01C21079E6200F321D2 /* MusicListTableViewController.swift */; };
-		FAD8AAA12108EC6A00FE170C /* NetworService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8AAA02108EC6A00FE170C /* NetworService.swift */; };
+		FAD8AAA12108EC6A00FE170C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8AAA02108EC6A00FE170C /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		FA95A8C021078C2500D63A14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA95A8C221078C2500D63A14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAA6A01C21079E6200F321D2 /* MusicListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListTableViewController.swift; sourceTree = "<group>"; };
-		FAD8AAA02108EC6A00FE170C /* NetworService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworService.swift; sourceTree = "<group>"; };
+		FAD8AAA02108EC6A00FE170C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		FE890C6B3DB931BD821D0480 /* Pods-TumblrMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TumblrMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-TumblrMusic/Pods-TumblrMusic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,7 +113,7 @@
 		FAD8AA9F2108EC5000FE170C /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				FAD8AAA02108EC6A00FE170C /* NetworService.swift */,
+				FAD8AAA02108EC6A00FE170C /* NetworkService.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -234,7 +234,7 @@
 			files = (
 				FA95A8B921078C2300D63A14 /* ViewController.swift in Sources */,
 				FA95A8B721078C2300D63A14 /* AppDelegate.swift in Sources */,
-				FAD8AAA12108EC6A00FE170C /* NetworService.swift in Sources */,
+				FAD8AAA12108EC6A00FE170C /* NetworkService.swift in Sources */,
 				FAA6A01D21079E6200F321D2 /* MusicListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
