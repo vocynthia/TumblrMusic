@@ -22,7 +22,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="bdR-sy-UDD">
                                 <rect key="frame" x="55" y="200" width="266" height="93"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BUG-sL-SBt">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Existing Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BUG-sL-SBt">
                                         <rect key="frame" x="0.0" y="0.0" width="266" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="FMq-Hh-sDs"/>
@@ -30,7 +30,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="266" id="pTF-UU-uiN"/>
                                         </constraints>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="usernameTextFieldUsed:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="noc-T3-8hX"/>
@@ -44,7 +44,7 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="gcL-N6-Vsb"/>
                                         </constraints>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="tagTextFieldUsed:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="axY-jE-Y23"/>
@@ -64,7 +64,7 @@
                                 </state>
                                 <connections>
                                     <action selector="enterButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ima-7c-Pfc"/>
-                                    <segue destination="8Ol-s0-PEa" kind="show" id="Ff8-wh-Tb1"/>
+                                    <segue destination="8Ol-s0-PEa" kind="show" identifier="MusicListSegue" id="Ff8-wh-Tb1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username is invalid! :(" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSb-Mk-eYD">

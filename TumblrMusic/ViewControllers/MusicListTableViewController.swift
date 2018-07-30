@@ -10,17 +10,13 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+//// WIP parse through audio posts
 //internal func idk(){
-//    guard let jsonURL = Bundle.main.url(forAuxiliaryExecutable: "NetworkService" )
-//        else {
-//        print("Could not find json!")
-//        return
-//    }
-//    let jsonData = try! Data(contentsOf: jsonURL)
 //
-//    let postsData = try! JSON(data: jsonData)
-//let audioPosts = postsData["meta"]["reposnse"]["posts"].arrayValue
-//let test = filter(json: audioPosts)
+//   let NM = NetworkManager()
+//    let json = JSON(data: NetworkManager)
+//let audioPosts = json["meta"]["reposnse"]["posts"].arrayValue
+//    let test = filter(json: audioPosts)
 //print("jkhjkhkh \(test.artist)")
 //}
 
@@ -28,6 +24,9 @@ import SwiftyJSON
 
 class MusicListTableViewController: UITableViewController {
 
+    
+    var username: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,7 +43,7 @@ class MusicListTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         let NM = NetworkManager()
-        let url = NM.getAudioPosts(username: "")
+        let url = NM.getAudioPosts(username: username!)
         
         
         Alamofire.request(URL(string: url)!).validate().responseJSON() { response in

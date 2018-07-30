@@ -15,7 +15,8 @@ import SwiftyJSON
 
 
 class ViewController: UIViewController {
-
+    
+    
     //IBOUTLETS
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var tagTextField: UITextField!
@@ -29,7 +30,7 @@ class ViewController: UIViewController {
         
         
     
-        // can only segue if username is valid
+        // WIP can only segue if username is valid 
 //        if (!usernameTextField.text.length) {
 //        performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
 //        } else {
@@ -61,10 +62,18 @@ class ViewController: UIViewController {
         print("button was pressed")
         print("tag entered was \(tagTextField)")
         
-        
+        //perform your segueway
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            if identifier == "MusicListSegue" {
+                let musicTableVC = segue.destination as! MusicListTableViewController
+                musicTableVC.username = usernameTextField.text
+            }
+        }
     }
 
     }
-
 
 
