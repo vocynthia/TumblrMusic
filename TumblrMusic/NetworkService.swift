@@ -25,14 +25,14 @@ struct filter {
     let artist: String
     let album: String
     let trackName: String
-//    let data: String  //music file
+    let audioFile: String  //music file
     
     init(json:JSON) {
         self.albumArt = json["album_art"].stringValue
         self.artist = json["artist"].stringValue
         self.album = json["artst"].stringValue
         self.trackName = json["track_name"].stringValue
-//        self.data =
+       self.audioFile = json["audio_url"].stringValue
         
     }
     

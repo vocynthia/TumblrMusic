@@ -10,17 +10,6 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-//// WIP parse through audio posts
-//internal func idk(){
-//
-//   let NM = NetworkManager()
-//    let json = JSON(data: NetworkManager)
-//let audioPosts = json["meta"]["reposnse"]["posts"].arrayValue
-//    let test = filter(json: audioPosts)
-//print("jkhjkhkh \(test.artist)")
-//}
-
-
 
 class MusicListTableViewController: UITableViewController {
 
@@ -42,6 +31,7 @@ class MusicListTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        let F = filter(json:"")
         let NM = NetworkManager()
         let url = NM.getAudioPosts(username: username!)
         
@@ -49,9 +39,21 @@ class MusicListTableViewController: UITableViewController {
         Alamofire.request(URL(string: url)!).validate().responseJSON() { response in
             switch response.result {
             case .success:
-                if let value = response.result.value {
-                    let json = JSON(value)
-                    print(json)
+                if let value = response.result.value as? [String: Any] {
+                    
+                    let response = value["response"] as? [String: Any]
+                    let posts = JSON(response!["posts"]!).arrayValue
+        
+                
+            var allAudioPosts: [filter] = []
+                    for audioPosts in posts {
+                        let audioObject = filter(json: audioPosts)
+                        allAudioPosts.append(audioObject)
+                        
+                    }
+                    for audioPosts in allAudioPosts{
+                        print("Song Title: \(audioPosts.trackName)","Artist:\(audioPosts.artist)", "Album: \(audioPosts.album)", " Album Art: \(audioPosts.albumArt)", "Audio File: \(audioPosts.audioFile)")
+                    }
                     
                     
                     
