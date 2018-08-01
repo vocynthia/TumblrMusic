@@ -70,6 +70,7 @@ class ViewController: UIViewController {
             if identifier == "MusicListSegue" {
                 let musicTableVC = segue.destination as! MusicListTableViewController
                 musicTableVC.username = usernameTextField.text
+                musicTableVC.tag = tagTextField.text
             }
         }
     }

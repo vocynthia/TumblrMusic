@@ -16,6 +16,7 @@ class MusicListTableViewController: UITableViewController {
 
     
     var username: String?
+    var tag: String?
     var viewControllerPost = [filter](){
         didSet{
             DispatchQueue.main.async {
@@ -39,7 +40,7 @@ class MusicListTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let NM = NetworkManager()
-        let url = NM.getAudioPosts(username: username!)
+        let url = NM.getAudioPosts(username: username!, tag: tag!)
         
         
         Alamofire.request(URL(string: url)!).validate().responseJSON() { response in
@@ -48,7 +49,7 @@ class MusicListTableViewController: UITableViewController {
                 if let value = response.result.value as? [String: Any] {
                     
                     let response = value["response"] as? [String: Any]
-                    var posts = JSON(response!["posts"]!).arrayValue
+                    let posts = JSON(response!["posts"]!).arrayValue
         
                 
             var allAudioPosts: [filter] = []

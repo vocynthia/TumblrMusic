@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="bdR-sy-UDD">
-                                <rect key="frame" x="55" y="200" width="266" height="113"/>
+                                <rect key="frame" x="55" y="172" width="266" height="113"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Existing Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BUG-sL-SBt">
                                         <rect key="frame" x="0.0" y="0.0" width="266" height="40"/>
@@ -30,7 +30,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="266" id="pTF-UU-uiN"/>
                                         </constraints>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="usernameTextFieldUsed:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="noc-T3-8hX"/>
@@ -44,7 +44,7 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="gcL-N6-Vsb"/>
                                         </constraints>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="tagTextFieldUsed:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="axY-jE-Y23"/>
@@ -53,7 +53,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZe-Os-PD6">
-                                <rect key="frame" x="107" y="363" width="161" height="32"/>
+                                <rect key="frame" x="107" y="335" width="161" height="32"/>
                                 <color key="backgroundColor" red="0.24602715351829366" green="0.37700622908239689" blue="0.5771930520304569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="yZe-Os-PD6" secondAttribute="height" multiplier="161:32" id="JEi-Rq-FK8"/>
@@ -67,12 +67,6 @@
                                     <segue destination="8Ol-s0-PEa" kind="show" identifier="MusicListSegue" id="Ff8-wh-Tb1"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username is invalid! :(" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSb-Mk-eYD">
-                                <rect key="frame" x="55" y="150.5" width="265" height="23.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -80,13 +74,9 @@
                             <constraint firstItem="yZe-Os-PD6" firstAttribute="top" secondItem="bdR-sy-UDD" secondAttribute="bottom" constant="50" id="C9b-jo-Gph"/>
                             <constraint firstItem="bdR-sy-UDD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H7i-DK-ewf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yZe-Os-PD6" secondAttribute="bottom" constant="300" id="Ng7-TA-EK5"/>
-                            <constraint firstItem="bdR-sy-UDD" firstAttribute="top" secondItem="fSb-Mk-eYD" secondAttribute="bottom" constant="26" id="Q0m-P8-Xp1"/>
-                            <constraint firstItem="fSb-Mk-eYD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="86" id="VAG-rV-Xpe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bdR-sy-UDD" secondAttribute="trailing" constant="54" id="XVi-ZR-zQu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yZe-Os-PD6" secondAttribute="trailing" constant="107" id="c5M-EK-HL6"/>
                             <constraint firstItem="yZe-Os-PD6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="fsG-ed-qhE"/>
-                            <constraint firstItem="fSb-Mk-eYD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="oDO-lv-tvo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fSb-Mk-eYD" secondAttribute="trailing" constant="55" id="vc5-Fi-nbg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -121,16 +111,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KII-6c-uQW">
-                                            <rect key="frame" x="16" y="22" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="16" y="21" width="34" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Vn-HP-zVc">
-                                            <rect key="frame" x="16" y="45.5" width="33" height="14.5"/>
+                                            <rect key="frame" x="16" y="45" width="33" height="15.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
