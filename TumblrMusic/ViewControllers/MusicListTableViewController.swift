@@ -9,13 +9,21 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-
+import AVFoundation
+import Kingfisher
 
 class MusicListTableViewController: UITableViewController {
 
     
     var username: String?
-    
+    var viewControllerPost = [filter](){
+        didSet{
+            DispatchQueue.main.async {
+                 self.tableView.reloadData()
+            }
+           
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,8 +38,6 @@ class MusicListTableViewController: UITableViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        let F = filter(json:"")
         let NM = NetworkManager()
         let url = NM.getAudioPosts(username: username!)
         
@@ -42,7 +48,7 @@ class MusicListTableViewController: UITableViewController {
                 if let value = response.result.value as? [String: Any] {
                     
                     let response = value["response"] as? [String: Any]
-                    let posts = JSON(response!["posts"]!).arrayValue
+                    var posts = JSON(response!["posts"]!).arrayValue
         
                 
             var allAudioPosts: [filter] = []
@@ -51,15 +57,17 @@ class MusicListTableViewController: UITableViewController {
                         allAudioPosts.append(audioObject)
                         
                     }
-                    for audioPosts in allAudioPosts{
+                    self.viewControllerPost = allAudioPosts
+                    
+                    for audioPosts in allAudioPosts {
                         print("Song Title: \(audioPosts.trackName)","Artist:\(audioPosts.artist)", "Album: \(audioPosts.album)", " Album Art: \(audioPosts.albumArt)", "Audio File: \(audioPosts.audioFile)")
                     }
-                    
                     
                     
                 }
             case .failure(let error):
                 print(error)
+                
             }
         }
    }
@@ -68,23 +76,44 @@ class MusicListTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return viewControllerPost.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+       
+        
+        let audio = self.viewControllerPost[indexPath.row]
+        
+        cell.textLabel?.text = audio.trackName
+        cell.detailTextLabel?.text = audio.artist
+        
+        if audio.albumArt.isEmpty{
+            let image = UIImage(named: "album")
+            cell.imageView?.image = image
+        }
+        else{
+              let imageURL = URL(string: audio.albumArt)!
+            cell.imageView?.kf.setImage(with: imageURL)
+        
+//        DispatchQueue.global().async {
+//            let imageURL = URL(string: audio.albumArt)!
+//            let imagedata = try! Data(contentsOf: imageURL)
+//            let image = UIImage(data: imagedata)
+//
+//            DispatchQueue.main.async {
+//                 cell.imageView?.image = image
+//            }
+//        }
+    }
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

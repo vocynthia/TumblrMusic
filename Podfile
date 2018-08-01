@@ -9,6 +9,8 @@ pod 'Alamofire', '~> 4.7'
 
 pod 'SwiftyJSON', '~> 4.0'
 
+pod 'Kingfisher'
+
   # Pods for TumblrMusic
 
 end
