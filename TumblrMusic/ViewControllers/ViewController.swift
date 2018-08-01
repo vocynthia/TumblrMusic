@@ -22,8 +22,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var tagTextField: UITextField!
     @IBOutlet weak var enterButton: UIButton!
    
-    @IBOutlet weak var invalidUsername: UILabel!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +56,7 @@ class ViewController: UIViewController {
         
         guard let tagTextField = self.tagTextField.text
             else {return}
+        
         print("username entered is \(usernameTextField)")
         print("button was pressed")
         print("tag entered was \(tagTextField)")

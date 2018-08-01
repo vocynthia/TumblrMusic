@@ -93,7 +93,7 @@
             </objects>
             <point key="canvasLocation" x="2717.5999999999999" y="112.89355322338831"/>
         </scene>
-        <!--Music List Table View Controller-->
+        <!--Title-->
         <scene sceneID="mj1-L5-DgS">
             <objects>
                 <tableViewController id="8Ol-s0-PEa" customClass="MusicListTableViewController" customModule="TumblrMusic" customModuleProvider="target" sceneMemberID="viewController">
@@ -134,7 +134,7 @@
                             <outlet property="delegate" destination="8Ol-s0-PEa" id="mzB-L0-qx1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="82p-Rw-rgb"/>
+                    <navigationItem key="navigationItem" title="Title" id="Ct4-A0-eax"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GhF-YV-hJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

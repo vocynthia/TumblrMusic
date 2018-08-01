@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D9818AF54FBB493115BB24D1 /* Pods_TumblrMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647B9656DFFCBDEEDD65E9F7 /* Pods_TumblrMusic.framework */; };
 		FA054B37211223250037952E /* if_045_Shuffle_183174.png in Resources */ = {isa = PBXBuildFile; fileRef = FA054B36211223240037952E /* if_045_Shuffle_183174.png */; };
+		FA054B3921127B250037952E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA054B3821127B250037952E /* Alamofire.framework */; };
 		FA6898D52110E1080090C25E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6898D42110E1080090C25E /* AVFoundation.framework */; };
 		FA95A8B721078C2300D63A14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95A8B621078C2300D63A14 /* AppDelegate.swift */; };
 		FA95A8B921078C2300D63A14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95A8B821078C2300D63A14 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 		647B9656DFFCBDEEDD65E9F7 /* Pods_TumblrMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TumblrMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD7B7D0BF54E479CB828FBA /* Pods-TumblrMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TumblrMusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TumblrMusic/Pods-TumblrMusic.debug.xcconfig"; sourceTree = "<group>"; };
 		FA054B36211223240037952E /* if_045_Shuffle_183174.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = if_045_Shuffle_183174.png; path = ../../../../Desktop/if_045_Shuffle_183174.png; sourceTree = "<group>"; };
+		FA054B3821127B250037952E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6898D42110E1080090C25E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		FA95A8B321078C2300D63A14 /* TumblrMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TumblrMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA95A8B621078C2300D63A14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA054B3921127B250037952E /* Alamofire.framework in Frameworks */,
 				FA6898D52110E1080090C25E /* AVFoundation.framework in Frameworks */,
 				D9818AF54FBB493115BB24D1 /* Pods_TumblrMusic.framework in Frameworks */,
 			);
@@ -61,6 +64,7 @@
 		E633CDEFE140A43BB6726D68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA054B3821127B250037952E /* Alamofire.framework */,
 				FA6898D42110E1080090C25E /* AVFoundation.framework */,
 				647B9656DFFCBDEEDD65E9F7 /* Pods_TumblrMusic.framework */,
 			);

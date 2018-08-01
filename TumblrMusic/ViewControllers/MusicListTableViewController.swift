@@ -25,8 +25,12 @@ class MusicListTableViewController: UITableViewController {
            
         }
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       self.navigationItem.title = username?.capitalized
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -37,6 +41,7 @@ class MusicListTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let NM = NetworkManager()
