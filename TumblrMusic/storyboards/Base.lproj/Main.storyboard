@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rW3-dD-RJE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y23-06-QnB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -67,6 +67,13 @@
                                     <segue destination="8Ol-s0-PEa" kind="show" identifier="MusicListSegue" id="Ff8-wh-Tb1"/>
                                 </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yA2-1Q-a1g">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="3Ac-2z-Y06" kind="embed" id="JjB-ev-IDX"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -91,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2717.5999999999999" y="112.89355322338831"/>
+            <point key="canvasLocation" x="4596" y="112.89355322338831"/>
         </scene>
         <!--Title-->
         <scene sceneID="mj1-L5-DgS">
@@ -138,28 +145,60 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GhF-YV-hJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3626.4000000000001" y="91.304347826086968"/>
+            <point key="canvasLocation" x="5504.8000000000002" y="91.304347826086968"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5bh-gj-mst">
+            <objects>
+                <viewController id="3Ac-2z-Y06" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LYx-uy-wnO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rhK-ee-due">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="jKa-Wy-Rff"/>
+                                    <barButtonItem systemItem="rewind" id="nww-MA-J06"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ksc-IG-eZd"/>
+                                    <barButtonItem systemItem="play" id="O5v-7s-VHa"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="jQF-YN-5fY"/>
+                                    <barButtonItem systemItem="fastForward" id="5Qf-Tq-soR"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="uGU-js-aqk"/>
+                                    <barButtonItem title="Item" image="shuffle" id="rv3-w1-dLt"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ShL-Xd-mWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3657" y="624"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="nSf-H5-Bae">
+        <scene sceneID="U3y-LB-ngg">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rW3-dD-RJE" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y23-06-QnB" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" id="1C8-fY-Mpj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" id="38h-Q5-Yr6">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.24602715350000001" green="0.37700622909999998" blue="0.57719305200000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="42N-8e-xZQ"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vXW-zV-Mot"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FXl-FF-V3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ooD-gI-S4T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1778.4000000000001" y="112.89355322338831"/>
+            <point key="canvasLocation" x="3656.8000000000002" y="112.89355322338831"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="shuffle" width="40" height="40"/>
+    </resources>
 </document>
