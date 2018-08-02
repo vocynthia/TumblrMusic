@@ -11,6 +11,8 @@ pod 'SwiftyJSON', '~> 4.0'
 
 pod 'Kingfisher'
 
+pod 'PagingTableView'
+
   # Pods for TumblrMusic
 
 end

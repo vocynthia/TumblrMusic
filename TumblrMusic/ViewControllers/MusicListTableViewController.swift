@@ -45,6 +45,8 @@ class MusicListTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let NM = NetworkManager()
+        let username = self.username?.replacingOccurrences(of: " ", with: "_")
+        let tag = self.tag?.replacingOccurrences(of: " ", with: "_")
         let url = NM.getAudioPosts(username: username!, tag: tag!)
         
         
