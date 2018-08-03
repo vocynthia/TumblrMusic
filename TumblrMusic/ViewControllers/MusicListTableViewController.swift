@@ -13,8 +13,10 @@ import AVFoundation
 import Kingfisher
 
 class MusicListTableViewController: UITableViewController {
-
     
+    
+    var toggleState = 1
+    var audioPlayer: AVPlayer!
     var username: String?
     var tag: String?
     var viewControllerPost = [filter](){
@@ -26,6 +28,47 @@ class MusicListTableViewController: UITableViewController {
         }
     }
     
+    func playSoundWith() -> Void {
+// if there is no audio
+        if viewControllerPost.isEmpty {
+            print("no audio found")
+        } else {
+        let audioURL = URL(string: viewControllerPost[0].audioFile)
+        let playerItem = AVPlayerItem.init(url: audioURL!)
+        audioPlayer = AVPlayer.init(playerItem: playerItem)
+       
+        
+        audioPlayer.play()
+
+        }
+    }
+    
+    
+    
+    
+    @IBAction func PlayPauseButton(_ sender: AnyObject) {
+            playSoundWith()
+            let playBtn = sender as! UIBarButtonItem
+        if viewControllerPost.isEmpty {
+        print("can't play lol")
+        } else if toggleState == 1 {
+            audioPlayer.play()
+            toggleState = 2
+            playBtn.image = UIImage(named:"pause.png")
+        } else {
+            audioPlayer.pause()
+            toggleState = 1
+            playBtn.image = UIImage(named:"play.png")
+        }
+    }
+    
+    @IBAction func RewindButton(_ sender: Any) {
+       
+    }
+    
+    @IBAction func ForwardButton(_ sender: Any) {
+      
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,6 +144,8 @@ class MusicListTableViewController: UITableViewController {
         
         cell.textLabel?.text = audio.trackName
         cell.detailTextLabel?.text = audio.artist
+//        cell.isSelected = Bool(audio.audioFile)!
+        
         
         if audio.albumArt.isEmpty{
             let image = UIImage(named: "album")
