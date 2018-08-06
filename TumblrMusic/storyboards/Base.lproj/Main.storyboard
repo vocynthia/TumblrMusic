@@ -172,9 +172,6 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Title" id="Ct4-A0-eax"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="audioPlayerProgressBar" destination="Pmg-KT-OsN" id="Pmk-Iy-gvA"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GhF-YV-hJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

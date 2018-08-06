@@ -23,7 +23,6 @@ class MusicListTableViewController: UITableViewController {
     var offset = 0
     var state = State.loaded
     
-    
     var toggleState = 1
     var audioPlayer: AVPlayer!
     var username: String?
@@ -62,7 +61,6 @@ class MusicListTableViewController: UITableViewController {
         print("can't play lol")
         } else if toggleState == 1 {
             // playback back to same time when audio was paused
-            
             audioPlayer.automaticallyWaitsToMinimizeStalling = false
             audioPlayer.playImmediately(atRate: 1.0)
             audioPlayer.currentTime()
@@ -72,14 +70,13 @@ class MusicListTableViewController: UITableViewController {
         } else {
             audioPlayer.pause()
             toggleState = 1
+            
             playBtn.image = UIImage(named:"play.png")
         }
     }
     
     @IBAction func RewindButton(_ sender: Any) {
-    audioPlayer.automaticallyWaitsToMinimizeStalling = false
-    audioPlayer.playImmediately(atRate: 1.0)
-    audioPlayer.play()
+    
     }
     
     @IBAction func ForwardButton(_ sender: Any) {
