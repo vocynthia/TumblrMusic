@@ -13,8 +13,8 @@ import SwiftyJSON
 
 
 struct NetworkManager {
-    func getAudioPosts(username: String, tag: String) -> String {
-        let url = "https://api.tumblr.com/v2/blog/\(username)/posts/audio?api_key=7uLhMXjYCmqyvzkaWqCXiSZ3RTEIEh9ex8QR3AWAY5RdpGXKcU&tag=\(tag)"
+    func getAudioPosts(username: String, tag: String, offset: Int) -> String {
+        let url = "https://api.tumblr.com/v2/blog/\(username)/posts/audio?api_key=7uLhMXjYCmqyvzkaWqCXiSZ3RTEIEh9ex8QR3AWAY5RdpGXKcU&tag=\(tag)&offset=\(offset)"
         return url
        
         }

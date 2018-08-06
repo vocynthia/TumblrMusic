@@ -110,9 +110,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="separatorColor" red="0.24602715350000001" green="0.37700622909999998" blue="0.57719305200000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <progressView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" id="Pmg-KT-OsN">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="3"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </progressView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" textLabel="KII-6c-uQW" detailTextLabel="9Vn-HP-zVc" rowHeight="85" style="IBUITableViewCellStyleSubtitle" id="229-j1-1R5">
-                                <rect key="frame" x="0.0" y="28" width="375" height="85"/>
+                                <rect key="frame" x="0.0" y="30" width="375" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="229-j1-1R5" id="HhC-wE-Jhg">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="84.5"/>
@@ -145,26 +149,31 @@
                     <toolbarItems>
                         <barButtonItem width="99" style="plain" systemItem="fixedSpace" id="MPg-9T-ULz"/>
                         <barButtonItem systemItem="rewind" id="Njr-iW-epz">
-                            <color key="tintColor" red="0.98274904819999997" green="0.98274904819999997" blue="0.98274904819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="RewindButton:" destination="8Ol-s0-PEa" id="zC5-Gu-zeO"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="SxY-WU-YUw"/>
                         <barButtonItem title="Item" image="play" id="HPC-xr-MUu">
-                            <color key="tintColor" red="0.98274904819999997" green="0.98274904819999997" blue="0.98274904819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="PlayPauseButton:" destination="8Ol-s0-PEa" id="CAc-FT-yWt"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="iqZ-pu-Avs">
-                            <connections>
-                                <action selector="ForwardButton:" destination="8Ol-s0-PEa" id="tpa-ym-JDF"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="iqZ-pu-Avs"/>
                         <barButtonItem systemItem="fastForward" id="twc-DH-Fkv">
-                            <color key="tintColor" red="0.98274904819999997" green="0.98274904819999997" blue="0.98274904819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="ForwardButton:" destination="8Ol-s0-PEa" id="mUn-ag-NTr"/>
+                            </connections>
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Title" id="Ct4-A0-eax"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="audioPlayerProgressBar" destination="Pmg-KT-OsN" id="Pmk-Iy-gvA"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GhF-YV-hJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

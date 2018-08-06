@@ -12,11 +12,21 @@ import SwiftyJSON
 import AVFoundation
 import Kingfisher
 
+enum State {
+    case loading
+    case loaded
+}
+
 class MusicListTableViewController: UITableViewController {
+    
+    var trackIndex: Int!
+    var offset = 0
+    var state = State.loaded
     
     
     var toggleState = 1
     var audioPlayer: AVPlayer!
+//    var audioPlayerProgress: UIProgressView = UIProgressView()
     var username: String?
     var tag: String?
     var viewControllerPost = [filter](){
@@ -27,13 +37,42 @@ class MusicListTableViewController: UITableViewController {
            
         }
     }
-    
+//    func updateAudioPlayerProgress() {
+//        // 1 . Guard got compile error because `videoPlayer.currentTime()` not returning an optional. So no just remove that.
+//        let currentTimeInSeconds = CMTimeGetSeconds(audioPlayer.currentTime())
+//        // 2 Alternatively, you could able to get current time from `currentItem` - videoPlayer.currentItem.duration
+//
+//        let mins = currentTimeInSeconds / 60
+//        let secs = currentTimeInSeconds.truncatingRemainder(dividingBy: 60)
+//        let timeformatter = NumberFormatter()
+//        timeformatter.minimumIntegerDigits = 2
+//        timeformatter.minimumFractionDigits = 0
+//        timeformatter.roundingMode = .down
+//        guard let minsStr = timeformatter.string(from: NSNumber(value: mins)),
+//            let secsStr = timeformatter.string(from: NSNumber(value: secs))
+//            else {
+//            return
+//        }
+//
+//        audioPlayerProgress.progress = Float(currentTimeInSeconds) // I don't think this is correct to show current progress, however, this update will fix the compile error
+//
+//        // 3 My suggestion is probably to show current progress properly
+//        if let currentItem = audioPlayer.currentItem {
+//            let duration = currentItem.duration
+//            if (CMTIME_IS_INVALID(duration)) {
+//                // Do sth
+//                return;
+//            }
+//            let currentTime = currentItem.currentTime()
+//            audioPlayerProgress.progress = Float(CMTimeGetSeconds(currentTime) / CMTimeGetSeconds(duration))
+//        }
+//    }
     func playSoundWith() -> Void {
 // if there is no audio
         if viewControllerPost.isEmpty {
             print("no audio found")
         } else {
-        let audioURL = URL(string: viewControllerPost[0].audioFile)
+        let audioURL = URL(string: viewControllerPost[trackIndex].audioFile)
         let playerItem = AVPlayerItem.init(url: audioURL!)
         audioPlayer = AVPlayer.init(playerItem: playerItem)
        
@@ -44,6 +83,8 @@ class MusicListTableViewController: UITableViewController {
     }
     
     
+    @IBOutlet weak var audioPlayerProgressBar: UIProgressView!
+    
     
     
     @IBAction func PlayPauseButton(_ sender: AnyObject) {
@@ -52,6 +93,11 @@ class MusicListTableViewController: UITableViewController {
         if viewControllerPost.isEmpty {
         print("can't play lol")
         } else if toggleState == 1 {
+            // playback back to same time when audio was paused
+            
+            audioPlayer.automaticallyWaitsToMinimizeStalling = false
+            audioPlayer.playImmediately(atRate: 1.0)
+            audioPlayer.currentTime()
             audioPlayer.play()
             toggleState = 2
             playBtn.image = UIImage(named:"pause.png")
@@ -63,34 +109,53 @@ class MusicListTableViewController: UITableViewController {
     }
     
     @IBAction func RewindButton(_ sender: Any) {
-       
+    audioPlayer.automaticallyWaitsToMinimizeStalling = false
+    audioPlayer.playImmediately(atRate: 1.0)
+    audioPlayer.play()
     }
     
     @IBAction func ForwardButton(_ sender: Any) {
-      
+       
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.trackIndex = 0
        self.navigationItem.title = username?.capitalized
-        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: .mixWithOthers)
+            print("Playback OK")
+            try AVAudioSession.sharedInstance().setActive(true)
+            print("Session is Active")
+        } catch {
+            print(error)
+        }
+        func playSoundWith() -> Void {
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
+        }
+    
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        trackIndex = indexPath.row
+        playSoundWith()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    func doNetworkRequest() {
+        state = .loading
         let NM = NetworkManager()
         let username = self.username?.replacingOccurrences(of: " ", with: "_")
         let tag = self.tag?.replacingOccurrences(of: " ", with: "_")
-        let url = NM.getAudioPosts(username: username!, tag: tag!)
+        let url = NM.getAudioPosts(username: username!, tag: tag!, offset: offset)
         
         
         Alamofire.request(URL(string: url)!).validate().responseJSON() { response in
@@ -100,15 +165,15 @@ class MusicListTableViewController: UITableViewController {
                     
                     let response = value["response"] as? [String: Any]
                     let posts = JSON(response!["posts"]!).arrayValue
-        
-                
-            var allAudioPosts: [filter] = []
+                    
+                    
+                    var allAudioPosts: [filter] = []
                     for audioPosts in posts {
                         let audioObject = filter(json: audioPosts)
                         allAudioPosts.append(audioObject)
                         
                     }
-                    self.viewControllerPost = allAudioPosts
+                    self.viewControllerPost.append(contentsOf: allAudioPosts)
                     
                     for audioPosts in allAudioPosts {
                         print("Song Title: \(audioPosts.trackName)","Artist:\(audioPosts.artist)", "Album: \(audioPosts.album)", " Album Art: \(audioPosts.albumArt)", "Audio File: \(audioPosts.audioFile)")
@@ -120,7 +185,24 @@ class MusicListTableViewController: UITableViewController {
                 print(error)
                 
             }
+            self.offset += 20
+            self.tableView.reloadData()
+            self.state = .loaded
         }
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row + 1 == viewControllerPost.count  && state != .loading {
+            doNetworkRequest()
+        }
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        doNetworkRequest()
+        
    }
 
     // MARK: - Table view data source
@@ -137,6 +219,8 @@ class MusicListTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
        
         
