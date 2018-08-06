@@ -26,7 +26,6 @@ class MusicListTableViewController: UITableViewController {
     
     var toggleState = 1
     var audioPlayer: AVPlayer!
-//    var audioPlayerProgress: UIProgressView = UIProgressView()
     var username: String?
     var tag: String?
     var viewControllerPost = [filter](){
@@ -37,36 +36,7 @@ class MusicListTableViewController: UITableViewController {
            
         }
     }
-//    func updateAudioPlayerProgress() {
-//        // 1 . Guard got compile error because `videoPlayer.currentTime()` not returning an optional. So no just remove that.
-//        let currentTimeInSeconds = CMTimeGetSeconds(audioPlayer.currentTime())
-//        // 2 Alternatively, you could able to get current time from `currentItem` - videoPlayer.currentItem.duration
-//
-//        let mins = currentTimeInSeconds / 60
-//        let secs = currentTimeInSeconds.truncatingRemainder(dividingBy: 60)
-//        let timeformatter = NumberFormatter()
-//        timeformatter.minimumIntegerDigits = 2
-//        timeformatter.minimumFractionDigits = 0
-//        timeformatter.roundingMode = .down
-//        guard let minsStr = timeformatter.string(from: NSNumber(value: mins)),
-//            let secsStr = timeformatter.string(from: NSNumber(value: secs))
-//            else {
-//            return
-//        }
-//
-//        audioPlayerProgress.progress = Float(currentTimeInSeconds) // I don't think this is correct to show current progress, however, this update will fix the compile error
-//
-//        // 3 My suggestion is probably to show current progress properly
-//        if let currentItem = audioPlayer.currentItem {
-//            let duration = currentItem.duration
-//            if (CMTIME_IS_INVALID(duration)) {
-//                // Do sth
-//                return;
-//            }
-//            let currentTime = currentItem.currentTime()
-//            audioPlayerProgress.progress = Float(CMTimeGetSeconds(currentTime) / CMTimeGetSeconds(duration))
-//        }
-//    }
+    
     func playSoundWith() -> Void {
 // if there is no audio
         if viewControllerPost.isEmpty {
@@ -82,8 +52,6 @@ class MusicListTableViewController: UITableViewController {
         }
     }
     
-    
-    @IBOutlet weak var audioPlayerProgressBar: UIProgressView!
     
     
     
@@ -174,10 +142,6 @@ class MusicListTableViewController: UITableViewController {
                         
                     }
                     self.viewControllerPost.append(contentsOf: allAudioPosts)
-                    
-                    for audioPosts in allAudioPosts {
-                        print("Song Title: \(audioPosts.trackName)","Artist:\(audioPosts.artist)", "Album: \(audioPosts.album)", " Album Art: \(audioPosts.albumArt)", "Audio File: \(audioPosts.audioFile)")
-                    }
                     
                     
                 }

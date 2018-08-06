@@ -147,27 +147,28 @@
                         </connections>
                     </tableView>
                     <toolbarItems>
-                        <barButtonItem width="99" style="plain" systemItem="fixedSpace" id="MPg-9T-ULz"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="yFg-Ja-YtW"/>
                         <barButtonItem systemItem="rewind" id="Njr-iW-epz">
                             <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="RewindButton:" destination="8Ol-s0-PEa" id="zC5-Gu-zeO"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="SxY-WU-YUw"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="oWb-i8-SJS"/>
                         <barButtonItem title="Item" image="play" id="HPC-xr-MUu">
                             <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="PlayPauseButton:" destination="8Ol-s0-PEa" id="CAc-FT-yWt"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="iqZ-pu-Avs"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Geu-AY-ZWV"/>
                         <barButtonItem systemItem="fastForward" id="twc-DH-Fkv">
                             <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="ForwardButton:" destination="8Ol-s0-PEa" id="mUn-ag-NTr"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="t0o-mk-glj"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Title" id="Ct4-A0-eax"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
