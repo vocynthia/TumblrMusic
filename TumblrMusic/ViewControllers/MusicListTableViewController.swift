@@ -41,12 +41,14 @@ class MusicListTableViewController: UITableViewController {
            
         }
     }
-    func playSoundWith(c: Int ) -> Void {
-// if there is no audio
+    func playerDidFinishPlaying(note: NSNotification) {
+        // Your code here
+    }
+    func playSoundWith(c: Int  ) -> Void {
         if viewControllerPost.isEmpty {
             print("no audio found")
         } else {
-            let audioURL = URL(string: viewControllerPost[c].audioFile)
+        let audioURL = URL(string: viewControllerPost[c].audioFile)
         let playerItem = AVPlayerItem.init(url: audioURL!)
         audioPlayer = AVPlayer.init(playerItem: playerItem)
         audioPlayer.automaticallyWaitsToMinimizeStalling = false
@@ -63,8 +65,7 @@ class MusicListTableViewController: UITableViewController {
     */
     
     @IBAction func PlayPauseButton(_ sender: AnyObject) {
-//        print("time is: \(audioPlayer.currentTime().seconds)")
-//        playSoundWith()
+//     print("time is: \(audioPlayer.currentTime().seconds)")
         let playBtn = sender as! UIBarButtonItem
         if viewControllerPost.isEmpty {
             print("can't play lol")
@@ -72,6 +73,7 @@ class MusicListTableViewController: UITableViewController {
         } else if isPlaying == false {
             
             if audioPlayer == nil {
+                tableView.selectRow(at: IndexPath.init(row: Int(trackIndex), section: 0 ), animated: true , scrollPosition: UITableViewScrollPosition.none )
                 playSoundWith(c: 0)
             }
             
@@ -96,14 +98,20 @@ class MusicListTableViewController: UITableViewController {
             
             playBtn.image = UIImage(named:"play.png")
         }
-//        if audioPlayer.pl {
-//    }
+//auto play lmao
+        /* if AVPlayerItemDidPlayToEndTime: NSNotification.audioPlayer {
+        trackIndex += 1
+        tableView.selectRow(at: IndexPath.init(row: Int(trackIndex), section: 0 ), animated: true , scrollPosition: UITableViewScrollPosition.none)
+        playSoundWith(c: Int(trackIndex))
+    } */
     }
     
     @IBAction func RewindButton(_ sender: Any) {
+        if trackIndex > 0 {
         trackIndex -= 1
+        tableView.selectRow(at: IndexPath.init(row: Int(trackIndex), section: 0 ), animated: true , scrollPosition: UITableViewScrollPosition.none )
         playSoundWith(c: Int(trackIndex))
-        audioPlayer.play()
+        }
      
         
         // SHOW SLECTED CELL
@@ -112,10 +120,11 @@ class MusicListTableViewController: UITableViewController {
     }
     
     @IBAction func ForwardButton(_ sender: Any) {
+        if trackIndex + 1 < viewControllerPost.count {
         trackIndex += 1
-        tableView.selectRow(at: IndexPath.init(row: Int(trackIndex), section: 1 ), animated: true , scrollPosition: UITableViewScrollPosition(rawValue: 3)! )
+        tableView.selectRow(at: IndexPath.init(row: Int(trackIndex), section: 0 ), animated: true , scrollPosition: UITableViewScrollPosition.none)
         playSoundWith(c: Int(trackIndex))
-        
+        }
 
     }
     
@@ -268,33 +277,34 @@ class MusicListTableViewController: UITableViewController {
     }
         return cell
     }
-//    private func setupAVAudioSession() {
-//        do {
-//            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-//            try AVAudioSession.sharedInstance().setActive(true)
-//            debugPrint("AVAudioSession is Active and Category Playback is set")
-//            UIApplication.shared.beginReceivingRemoteControlEvents()
-//            setupCommandCenter()
-//        } catch {
-//            debugPrint("Error: \(error)")
-//        }
-//    }
-//    private func setupCommandCenter() {
-//        let audio = self.viewControllerPost
-//        MPNowPlayingInfoCenter.default().nowPlayingInfo = [MPMediaItemPropertyTitle: .trackName ]
-//
-//        let commandCenter = MPRemoteCommandCenter.shared()
-//        commandCenter.playCommand.isEnabled = true
-//        commandCenter.pauseCommand.isEnabled = true
-//        commandCenter.playCommand.addTarget { [weak self] (event) -> MPRemoteCommandHandlerStatus in
-//            self?.audioPlayer.play()
-//            return .success
-//        }
-//        commandCenter.pauseCommand.addTarget { [weak self] (event) -> MPRemoteCommandHandlerStatus in
-//            self?.audioPlayer.pause()
-//            return .success
-//        }
-//    }
+    
+    private func setupAVAudioSession() {
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            debugPrint("AVAudioSession is Active and Category Playback is set")
+            UIApplication.shared.beginReceivingRemoteControlEvents()
+            setupCommandCenter()
+        } catch {
+            debugPrint("Error: \(error)")
+        }
+    }
+    private func setupCommandCenter() {
+        MPNowPlayingInfoCenter.default().nowPlayingInfo = [MPMediaItemPropertyTitle:  ]
+
+        let commandCenter = MPRemoteCommandCenter.shared()
+        commandCenter.playCommand.isEnabled = true
+        commandCenter.pauseCommand.isEnabled = true
+        commandCenter.playCommand.addTarget { [weak self] (event) -> MPRemoteCommandHandlerStatus in
+            self?.audioPlayer.play()
+            return .success
+        }
+        commandCenter.pauseCommand.addTarget { [weak self] (event) -> MPRemoteCommandHandlerStatus in
+            self?.audioPlayer.pause()
+            return .success
+        }
+    }
+ 
 
 
     /*
