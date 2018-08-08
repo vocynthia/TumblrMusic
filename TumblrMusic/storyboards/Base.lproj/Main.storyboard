@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main-->
+        <!--Search-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TumblrMusic" customModuleProvider="target" sceneMemberID="viewController">
@@ -75,6 +75,7 @@
                             <constraint firstItem="bdR-sy-UDD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H7i-DK-ewf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yZe-Os-PD6" secondAttribute="bottom" constant="300" id="Ng7-TA-EK5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bdR-sy-UDD" secondAttribute="trailing" constant="54" id="XVi-ZR-zQu"/>
+                            <constraint firstItem="bdR-sy-UDD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="Xqn-yd-cDV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yZe-Os-PD6" secondAttribute="trailing" constant="107" id="c5M-EK-HL6"/>
                             <constraint firstItem="yZe-Os-PD6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="fsG-ed-qhE"/>
                         </constraints>
@@ -87,7 +88,7 @@
                         <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="fUQ-NM-5fG"/>
                         <barButtonItem width="40" style="plain" systemItem="fixedSpace" id="7rK-Q9-qMd"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Main" id="026-YL-ysg">
+                    <navigationItem key="navigationItem" title="Search" id="026-YL-ysg">
                         <barButtonItem key="backBarButtonItem" title=" " id="vLh-VC-Rcs"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -172,6 +173,9 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Title" id="Ct4-A0-eax"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="playPauseButton" destination="HPC-xr-MUu" id="3nM-09-e3y"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GhF-YV-hJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -188,7 +192,7 @@
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.24602715350000001" green="0.37700622909999998" blue="0.57719305200000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.20000000000000001" green="0.27058823529999998" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="bwO-70-v34">
