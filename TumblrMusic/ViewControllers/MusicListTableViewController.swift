@@ -278,32 +278,7 @@ class MusicListTableViewController: UITableViewController {
         return cell
     }
     
-//    private func setupAVAudioSession() {
-//        do {
-//            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-//            try AVAudioSession.sharedInstance().setActive(true)
-//            debugPrint("AVAudioSession is Active and Category Playback is set")
-//            UIApplication.shared.beginReceivingRemoteControlEvents()
-//            setupCommandCenter()
-//        } catch {
-//            debugPrint("Error: \(error)")
-//        }
-//    }
-//    private func setupCommandCenter() {
-//        MPNowPlayingInfoCenter.default().nowPlayingInfo = [MPMediaItemPropertyTitle:  ]
-//
-//        let commandCenter = MPRemoteCommandCenter.shared()
-//        commandCenter.playCommand.isEnabled = true
-//        commandCenter.pauseCommand.isEnabled = true
-//        commandCenter.playCommand.addTarget { [weak self] (event) -> MPRemoteCommandHandlerStatus in
-//            self?.audioPlayer.play()
-//            return .success
-//        }
-//        commandCenter.pauseCommand.addTarget { [weak self] (event) -> MPRemoteCommandHandlerStatus in
-//            self?.audioPlayer.pause()
-//            return .success
-//        }
-//    }
+
  
 
 
