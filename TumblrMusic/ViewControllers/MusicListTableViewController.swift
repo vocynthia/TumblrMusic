@@ -41,14 +41,7 @@ class MusicListTableViewController: UITableViewController {
            
         }
     }
-//    func playerDidFinishPlaying(note: NSNotification) {
-//        NotificationCenter.default.addObserver(forName: <#T##NSNotification.Name?#>, object: <#T##Any?#>, queue: <#T##OperationQueue?#>, using: <#T##(Notification) -> Void#>)
-    //auto play lmao
-    /* if AVPlayerItemDidPlayToEndTime: NSNotification.audioPlayer {
-     trackIndex += 1
-     tableView.selectRow(at: IndexPath.init(row: Int(trackIndex), section: 0 ), animated: true , scrollPosition: UITableViewScrollPosition.none)
-     playSoundWith(c: Int(trackIndex))
-     } */
+    
     
     func playSoundWith(c: Int  ) -> Void {
         if viewControllerPost.isEmpty {
@@ -60,15 +53,24 @@ class MusicListTableViewController: UITableViewController {
         audioPlayer.automaticallyWaitsToMinimizeStalling = false
         audioPlayer.playImmediately(atRate: 1.0)
         audioPlayer.play()
+        
 
         }
     }
     
     
-    /* TODO:
-    1. check if the image is playing and change it to pause when you select a cell
-     2. toggle state when you play a song form selection
-    */
+  
+    func setNowPlayingInfo()
+    {
+        let nowPlayingInfoCenter = MPNowPlayingInfoCenter.default()
+        var nowPlayingInfo = nowPlayingInfoCenter.nowPlayingInfo ?? [String: Any]()
+        
+        let title = filter.init(json:["track_name"])
+        
+        nowPlayingInfo[MPMediaItemPropertyTitle] = title
+        
+        nowPlayingInfoCenter.nowPlayingInfo = nowPlayingInfo
+    }
     
     @IBAction func PlayPauseButton(_ sender: AnyObject) {
 //     print("time is: \(audioPlayer.currentTime().seconds)")
@@ -103,7 +105,9 @@ class MusicListTableViewController: UITableViewController {
             isPlaying = false
             
             playBtn.image = UIImage(named:"play.png")
-        }}
+        }
+        
+    }
 
     
     @IBAction func RewindButton(_ sender: Any) {
@@ -131,6 +135,7 @@ class MusicListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNowPlayingInfo()
         self.trackIndex = 0
        self.navigationItem.title = username?.capitalized
         do {
@@ -161,6 +166,16 @@ class MusicListTableViewController: UITableViewController {
             playPauseButton.image = UIImage(named:"pause.png")
             
     }
+        
+/* NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.player.currentItem, queue: .main) { _ in
+         trackIndex += 1
+         tableView.selectRow(at: IndexPath.init(row: Int(trackIndex), section: 0 ), animated: true , scrollPosition: UITableViewScrollPosition.none)
+         playSoundWith(c: Int(trackIndex))
+         }
+         
+         
+    */
+        
     }
 
     override func didReceiveMemoryWarning() {
