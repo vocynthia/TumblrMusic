@@ -51,6 +51,9 @@
                                         </connections>
                                     </textField>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="BJ6-9Z-3qe" firstAttribute="top" secondItem="BUG-sL-SBt" secondAttribute="bottom" constant="33" id="atW-eK-rh9"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZe-Os-PD6">
                                 <rect key="frame" x="107" y="291" width="161" height="32"/>
