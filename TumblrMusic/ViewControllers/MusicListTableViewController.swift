@@ -160,14 +160,7 @@ class MusicListTableViewController: UITableViewController {
             isPlaying = true
             playPauseButton.image = UIImage(named:"pause.png")
             
-        } else {
-            
-            isPlaying = false
-            pausedTime = audioPlayer.currentItem?.currentTime()
-            audioPlayer.pause()
-            playPauseButton.image = UIImage(named:"play.png")
-            
-        }
+    }
     }
 
     override func didReceiveMemoryWarning() {
