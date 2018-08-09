@@ -153,17 +153,18 @@ class MusicListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         trackIndex = indexPath.row
+        playSoundWith(c: Int(trackIndex))
         if isPlaying == false {
             // playback back to same time when audio was paused
-            playSoundWith(c: Int(trackIndex))
+            
             isPlaying = true
             playPauseButton.image = UIImage(named:"pause.png")
             
         } else {
             
+            isPlaying = false
             pausedTime = audioPlayer.currentItem?.currentTime()
             audioPlayer.pause()
-            isPlaying = false
             playPauseButton.image = UIImage(named:"play.png")
             
         }
