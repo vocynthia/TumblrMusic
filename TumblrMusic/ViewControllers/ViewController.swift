@@ -10,6 +10,7 @@ import UIKit
 import Foundation
 import AVFoundation
 import Alamofire
+import MediaPlayer
 import SwiftyJSON
 
 
@@ -24,13 +25,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         
         
-        
-    
-        // WIP can only segue if username is valid 
-//        if (!usernameTextField.text.length) {
-//        performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
-//        } else {
         
         
     }
