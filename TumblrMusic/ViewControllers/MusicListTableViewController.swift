@@ -167,7 +167,9 @@ class MusicListTableViewController: UITableViewController {
             
     }
         
-/* NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.player.currentItem, queue: .main) { _ in
+/*  AUTOPLAY WIP
+         
+         NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.player.currentItem, queue: .main) { _ in
          trackIndex += 1
          tableView.selectRow(at: IndexPath.init(row: Int(trackIndex), section: 0 ), animated: true , scrollPosition: UITableViewScrollPosition.none)
          playSoundWith(c: Int(trackIndex))
