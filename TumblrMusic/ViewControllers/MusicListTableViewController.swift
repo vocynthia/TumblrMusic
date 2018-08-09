@@ -212,12 +212,12 @@ class MusicListTableViewController: UITableViewController {
         
     }
     
-//    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        if indexPath.row + 1 == viewControllerPost.count  && state != .loading {
-//            doNetworkRequest()
-//        }
-//        
-//    }
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row + 1 == viewControllerPost.count  && state != .loading {
+            doNetworkRequest()
+        }
+        
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
