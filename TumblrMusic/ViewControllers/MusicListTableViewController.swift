@@ -41,9 +41,15 @@ class MusicListTableViewController: UITableViewController {
            
         }
     }
-    func playerDidFinishPlaying(note: NSNotification) {
-        // Your code here
-    }
+//    func playerDidFinishPlaying(note: NSNotification) {
+//        NotificationCenter.default.addObserver(forName: <#T##NSNotification.Name?#>, object: <#T##Any?#>, queue: <#T##OperationQueue?#>, using: <#T##(Notification) -> Void#>)
+    //auto play lmao
+    /* if AVPlayerItemDidPlayToEndTime: NSNotification.audioPlayer {
+     trackIndex += 1
+     tableView.selectRow(at: IndexPath.init(row: Int(trackIndex), section: 0 ), animated: true , scrollPosition: UITableViewScrollPosition.none)
+     playSoundWith(c: Int(trackIndex))
+     } */
+    
     func playSoundWith(c: Int  ) -> Void {
         if viewControllerPost.isEmpty {
             print("no audio found")
@@ -97,14 +103,8 @@ class MusicListTableViewController: UITableViewController {
             isPlaying = false
             
             playBtn.image = UIImage(named:"play.png")
-        }
-//auto play lmao
-        /* if AVPlayerItemDidPlayToEndTime: NSNotification.audioPlayer {
-        trackIndex += 1
-        tableView.selectRow(at: IndexPath.init(row: Int(trackIndex), section: 0 ), animated: true , scrollPosition: UITableViewScrollPosition.none)
-        playSoundWith(c: Int(trackIndex))
-    } */
-    }
+        }}
+
     
     @IBAction func RewindButton(_ sender: Any) {
         if trackIndex > 0 {
@@ -117,7 +117,7 @@ class MusicListTableViewController: UITableViewController {
         // SHOW SLECTED CELL
         
      
-    }
+}
     
     @IBAction func ForwardButton(_ sender: Any) {
         if trackIndex + 1 < viewControllerPost.count {
