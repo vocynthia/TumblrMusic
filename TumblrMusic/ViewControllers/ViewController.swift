@@ -56,9 +56,9 @@ class ViewController: UIViewController {
         guard let tagTextField = self.tagTextField.text
             else {return}
         
-        print("username entered is \(usernameTextField)")
-        print("button was pressed")
-        print("tag entered was \(tagTextField)")
+//        print("username entered is \(usernameTextField)")
+//        print("button was pressed")
+//        print("tag entered was \(tagTextField)")
         
         //perform your segueway
     }

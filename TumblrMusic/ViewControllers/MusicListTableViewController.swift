@@ -74,7 +74,7 @@ class MusicListTableViewController: UITableViewController {
 //     print("time is: \(audioPlayer.currentTime().seconds)")
         let playBtn = sender as! UIBarButtonItem
         if viewControllerPost.isEmpty {
-            print("can't play lol")
+            print("can't play ")
  
         } else if isPlaying == false {
             
