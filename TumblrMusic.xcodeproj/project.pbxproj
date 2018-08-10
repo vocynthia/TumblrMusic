@@ -395,7 +395,7 @@
 			baseConfigurationReference = AFD7B7D0BF54E479CB828FBA /* Pods-TumblrMusic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Cindy Vo (G99U8KVY8M)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Cindy Vo (LVXK883224)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = LVXK883224;
 				INFOPLIST_FILE = TumblrMusic/Info.plist;
@@ -417,7 +417,7 @@
 			baseConfigurationReference = FE890C6B3DB931BD821D0480 /* Pods-TumblrMusic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Cindy Vo (G99U8KVY8M)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Cindy Vo (LVXK883224)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = LVXK883224;
 				INFOPLIST_FILE = TumblrMusic/Info.plist;
