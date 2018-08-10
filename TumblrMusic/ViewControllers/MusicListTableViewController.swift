@@ -20,6 +20,7 @@ enum State {
 }
 
 class MusicListTableViewController: UITableViewController {
+    @IBOutlet weak var AutoplaySwitch: UISwitch!
     
     @IBOutlet weak var playPauseButton: UIBarButtonItem!
     var trackIndex: Int = 0
