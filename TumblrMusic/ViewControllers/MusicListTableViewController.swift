@@ -190,7 +190,7 @@ class MusicListTableViewController: UITableViewController {
         state = .loading
         let NM = NetworkManager()
         let username = self.username?.replacingOccurrences(of: " ", with: "_")
-        let tag = self.tag?.replacingOccurrences(of: " ", with: "_")
+        let tag = self.tag?.replacingOccurrences(of: " ", with: "%20")
         let url = NM.getAudioPosts(username: username!, tag: tag!, offset: offset)
         
         Alamofire.request(URL(string: url)!).validate().responseJSON() { response in
