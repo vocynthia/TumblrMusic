@@ -181,11 +181,15 @@ class MusicListTableViewController: UITableViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if audioPlayer == nil {
+            print("nothing")
+        } else {
+            audioPlayer.pause()
+        }
+        
         guard segue.identifier != nil else { return }
-        audioPlayer.pause()
-
-        
-        
+       
+    
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
