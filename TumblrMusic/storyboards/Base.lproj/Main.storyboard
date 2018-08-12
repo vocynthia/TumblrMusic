@@ -169,13 +169,21 @@
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="t0o-mk-glj"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Title" id="Ct4-A0-eax"/>
+                    <navigationItem key="navigationItem" title="Title" id="Ct4-A0-eax">
+                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="F7h-v3-SML">
+                            <connections>
+                                <action selector="UnwindSegue:" destination="kYm-Pi-QWX" id="hmP-jY-7cZ"/>
+                                <segue destination="kYm-Pi-QWX" kind="unwind" unwindAction="UnwindSegue:" id="WQd-f7-w6I"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="playPauseButton" destination="HPC-xr-MUu" id="3nM-09-e3y"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GhF-YV-hJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="kYm-Pi-QWX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5504.8000000000002" y="91.304347826086968"/>
         </scene>
