@@ -84,11 +84,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem width="89" style="plain" systemItem="fixedSpace" id="Uqa-VY-t7f">
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="wg7-uX-ch9"/>
+                        <barButtonItem title="Powered by Tumblr" id="4na-It-Eey">
                             <color key="tintColor" red="0.24602715350000001" green="0.37700622909999998" blue="0.57719305200000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="fUQ-NM-5fG"/>
-                        <barButtonItem width="40" style="plain" systemItem="fixedSpace" id="7rK-Q9-qMd"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="YMs-HV-DC8"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Search" id="026-YL-ysg">
                         <barButtonItem key="backBarButtonItem" title=" " id="vLh-VC-Rcs"/>
